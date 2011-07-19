@@ -106,8 +106,8 @@
 			// make sure StreetView is off so we can see search results
 			map.getStreetView().setVisible(false);
 						
-			var lat = marker.position.Ja;
-			var lng = marker.position.Ka;
+			var lat = marker.getPosition().lat();
+			var lng = marker.getPosition().lng();
 			document.getElementById('address').value = lat + ', ' + lng;
 			if (window.localStorage){
 				localStorage.setItem('address', lat + ', ' + lng )
